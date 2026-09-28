@@ -25,7 +25,7 @@ services:
           type: redis
           property: connectionString
 
-  - type: redis
+  - type: keyvalue
     name: day12-redis
     plan: free
     ipAllowList: []
