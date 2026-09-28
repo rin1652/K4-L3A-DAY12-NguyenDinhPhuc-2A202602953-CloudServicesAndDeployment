@@ -8,32 +8,32 @@
 
 ## Thông Tin Học Viên
 
-| Mục | Nội dung |
-|-----|----------|
-| Họ và tên | Nguyễn Đình Phúc |
-| Mã học viên | 2A202602953 |
-| Repo | https://github.com/rin1652/K4-L3A-DAY12-NguyenDinhPhuc-2A202602953-CloudServicesAndDeployment |
+| Mục         | Nội dung                                                                                      |
+| ----------- | --------------------------------------------------------------------------------------------- |
+| Họ và tên   | Nguyễn Đình Phúc                                                                              |
+| Mã học viên | 2A202602953                                                                                   |
+| Repo        | https://github.com/rin1652/K4-L3A-DAY12-NguyenDinhPhuc-2A202602953-CloudServicesAndDeployment |
 
 ## Service
 
-| Mục | Nội dung |
-|-----|----------|
-| Public URL | http://localhost:8000 (LOCAL_FALLBACK) |
-| Platform | Railway configuration prepared; Docker Compose local fallback |
-| Ngày deploy | 2026-09-28 |
+| Mục         | Nội dung                                                      |
+| ----------- | ------------------------------------------------------------- |
+| Public URL  | https://k4-l3a-day12-nguyendinhphuc-2a202602953.onrender.com  |
+| Platform    | Railway configuration prepared; Docker Compose local fallback |
+| Ngày deploy | 2026-09-28                                                    |
 
 ## Biến Môi Trường Đã Set Trên Cloud
 
 Ghi tên biến và **nguồn giá trị**, không ghi giá trị:
 
-| Biến | Đã set | Ghi chú |
-|------|--------|---------|
-| `PORT` | ✅ | platform tự gán |
-| `AGENT_API_KEY` | ✅ | đặt trong dashboard, không nằm trong repo |
-| `REDIS_URL` | ✅ | Redis service trong Docker Compose |
-| `RATE_LIMIT_PER_MINUTE` | ✅ | 10 |
-| `MONTHLY_BUDGET_USD` | ✅ | 10.0 |
-| `LOG_LEVEL` | ✅ | INFO |
+| Biến                    | Đã set | Ghi chú                                   |
+| ----------------------- | ------ | ----------------------------------------- |
+| `PORT`                  | ✅     | platform tự gán                           |
+| `AGENT_API_KEY`         | ✅     | đặt trong dashboard, không nằm trong repo |
+| `REDIS_URL`             | ✅     | Redis service trong Docker Compose        |
+| `RATE_LIMIT_PER_MINUTE` | ✅     | 10                                        |
+| `MONTHLY_BUDGET_USD`    | ✅     | 10.0                                      |
+| `LOG_LEVEL`             | ✅     | INFO                                      |
 
 ## Lệnh Kiểm Tra
 

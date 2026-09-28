@@ -28,15 +28,14 @@ jobs:
         run: docker build -t day12-agent:${{ github.sha }} .
 
   deploy:
-    name: Deploy to Railway
+    name: Deploy to Render
     needs: [test, build]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - name: Install Railway CLI
-        run: npm install --global @railway/cli
-      - name: Deploy
-        run: railway up --service "${{ secrets.RAILWAY_SERVICE }}"
-        env:
-          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - name: Trigger Render deploy hook
+        if: ${{ secrets.RENDER_DEPLOY_HOOK_URL != '' }}
+        run: curl --fail --silent --show-error --request POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+      - name: Render auto-deploy status
+        if: ${{ secrets.RENDER_DEPLOY_HOOK_URL == '' }}
+        run: echo "Render is configured for automatic deploy from the connected GitHub branch."
